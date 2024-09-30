@@ -1,0 +1,188 @@
+@charset "utf-8";
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  /* padding-bottom: 75px; */
+  min-height: 100%;
+}
+li {
+  list-style: none;
+}
+p, ul {
+  margin: 0;
+  padding: 0;
+}
+div,li {
+  box-sizing: border-box;
+}
+.header_nav {
+  background: linear-gradient(90deg, #fff 20%, rgba(0,0,0,.6) 60%);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: stretch;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.global_nav_item {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.global_nav_item:hover {
+  background: #fff;
+  color: #42210b;
+}
+.global_nav {
+  display: flex;
+  align-items: stretch;
+}
+.logo {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+.logo img{
+  width: 100%;
+}
+.section_inner {
+  padding: 50px 10% 30px;
+}
+.key {
+  height: 500px;
+  background: center / cover no-repeat url("../images/sample_key.jpg");
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.key h1{
+  font-size: 2.5rem;
+}
+.section_title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.concept_flex {
+  display: flex;
+  justify-content: space-between;
+}
+.concept_flex p {
+  width: 60%;
+}
+.concept_flex img {
+  width: 35%;
+}
+.menu_title {
+  display: inline-block;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.5rem;
+  color: #42210b;
+  border-bottom: solid #42210b 1px;
+  margin-bottom: 20px;
+}
+.pancake_menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  margin-bottom: 50px;
+}
+.pancake_item {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row-reverse;
+  width: 49%;
+  box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.4);
+}
+.pancake_content {
+  width: 45%;
+  padding: 10px;
+  background-color: white;
+}
+.pancake_item img {
+  width: 55%;
+  height: 300px;
+  object-fit: cover;
+}
+.pancake_price {
+  text-align: right;
+  margin-top: 70px;
+}
+.menu {
+  background-image: url("../images/sample_menu_bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center -900px;
+}
+.center {
+  text-align: center;
+}
+.caffee_menu_image {
+  width: 20%;
+  border-radius: 50%;
+  flex-shrink: 0; /* 画像が縮小されないようにする */
+  /* flexboxでは小要素がデフォルトでflex-shrink: 1;になる */
+}
+.grid_container {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  /* grid-template-columns: 1fr 1fr; */
+  /* coffee_contentを49%にするとimgが潰れてしまった為
+  /* grid-template-rows: 1fr 1fr; */
+  grid-gap: 10px;
+  margin: 20px;
+  padding: 20px;
+  background-color: white; 
+}
+.coffee_content {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.coffee_item {
+  /* flex: 1; */
+  /* flex: 1;で調整すると内包するflex-growプロパティにより、
+  　　幅の成長がwidth指定を上書きするため手動での調整ができなくなる */
+  padding-right: 10px;
+  width: 80%;
+}
+dl {
+  display: flex;
+}
+dt {
+  width: 80px;
+}
+iframe {
+  width: 100%;
+  height: 80vh;
+}
+footer {
+  background-color: #251e19;
+  height: 75px;
+  text-align: center;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-alignはインライン要素に、margin: 0 auto;はブロック要素に対して適用されるので
+     フレックスボックスプロパティの対象には機能しない　*/
+}
+footer li {
+  color: white;
+  margin: 0 15px 0;
+}
+footer img {
+  width: 80px;
+}
+footer p {
+  color: white;
+  font-size: 75%;
+  margin-top: 10px;
+}
